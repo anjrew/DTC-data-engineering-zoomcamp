@@ -36,7 +36,9 @@ SELECT COUNT(*) FROM trip WHERE                                                 
 
 4. 2019-01-15
 ```sql
-SELECT * FROM trip                                                                        ORDER BY trip_distance DESC                                                                                  LIMIT 1;
+SELECT * FROM trip                                                                        
+ORDER BY trip_distance DESC                                                                                  
+LIMIT 1;
 ```
 
 5. 2: 1282 ; 3: 254
@@ -61,7 +63,7 @@ WITH two AS (
 
 6. Long Island City/Queens Plaza
 ```sql
-SELECT TIP_AMOUNT, t.PULOCATIONID, t.DOLOCATIONID, Tz.LOCATIONID, tz."zone" AS pickup_zone, tz2.LOCATIONID , tz2."zone" AS dropoff_zone  
+SELECT TIP_AMOUNT, t.PULOCATIONID, t.DOLOCATIONID, Tz.LOCATIONID, TZ."zone" AS pickup_zone, tz2.LOCATIONID , TZ2."zone" AS dropoff_zone  
 FROM TRIP T
 JOIN TAXI_ZONE TZ  ON t.PULOCATIONID  = tz.LOCATIONID 
 JOIN TAXI_ZONE TZ2  ON t.DOLOCATIONID  = TZ2.LOCATIONID

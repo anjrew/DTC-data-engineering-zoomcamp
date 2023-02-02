@@ -1,6 +1,10 @@
 *.gz
 .dist/
 **/data/
+secrets/
+**/.terraform
+week_1/terraform/.terraform
+week_1/terraform/.terraform.lock.hcl
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
