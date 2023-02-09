@@ -26,3 +26,18 @@ flows/gcp/etl_web_to_gcs.py
 ```bash
 flows/gcp/etl_gcs_to_bq.py
 ```
+
+## Build a Flow yaml file configuration
+```bash
+prefect deployment build ./flows/gcp/parameterized_flow.py -n "Parameterized Flow"
+```
+
+## Deploy a flow through a configuration file
+```bash
+prefect deployment apply ./etl_parent_flow-deployment.yaml
+```
+
+## Launch a agent to pull a work queue
+```bash
+prefect agent start --work-queue "default"
+```
