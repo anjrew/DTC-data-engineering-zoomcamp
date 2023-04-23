@@ -41,3 +41,13 @@ prefect deployment apply ./etl_parent_flow-deployment.yaml
 ```bash
 prefect agent start --work-queue "default"
 ```
+
+## Build a docker image
+```bash
+docker image build -t earyzhe/prefect:zoom . 
+```
+
+## Setup the API so docker can talk to prefect
+```
+prefect config set PREFECT_API_URL="http://127.0.0.1:4200/api"
+```

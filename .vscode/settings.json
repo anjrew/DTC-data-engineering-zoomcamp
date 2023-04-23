@@ -4,11 +4,13 @@
         "creds",
         "dezoomcamp",
         "gcloud",
+        "openapi",
         "orion",
         "postgres",
         "tfstate",
         "tpep",
         "tripdata",
+        "zoomcamp",
         "Zoomcamp"
     ]
 }
